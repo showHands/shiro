@@ -1,0 +1,19 @@
+2018-06-28 21:17:19.323 [main] INFO  com.vmax.WeimaiApplication - Starting WeimaiApplication on wangxiaotaodeMacBook-Pro.local with PID 12041 (started by wangxiaotao in /Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai)
+2018-06-28 21:17:19.330 [main] DEBUG com.vmax.WeimaiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-06-28 21:17:19.331 [main] INFO  com.vmax.WeimaiApplication - No active profile set, falling back to default profiles: default
+2018-06-28 21:17:19.734 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-06-28 21:17:20.575 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/com/vmax/mapper/TUserMapper.class]
+2018-06-28 21:17:20.575 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'TUserMapper' and 'com.vmax.mapper.TUserMapper' mapperInterface
+2018-06-28 21:17:20.576 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'TUserMapper'.
+2018-06-28 21:17:22.590 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-28 21:17:22.591 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-06-28 21:17:22.690 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-28 21:17:23.279 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-06-28 21:17:23.350 [main] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2018-06-28 21:17:23.352 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.vmax.entity.TUser matches criteria [is assignable to Object]
+2018-06-28 21:17:23.352 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.vmax.entity' for aliases
+2018-06-28 21:17:23.508 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/mapper/TUserMapper.xml]'
+2018-06-28 21:17:24.630 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-28 21:17:24.649 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-28 21:17:24.690 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-06-28 21:17:24.758 [main] INFO  com.vmax.WeimaiApplication - Started WeimaiApplication in 6.071 seconds (JVM running for 7.507)

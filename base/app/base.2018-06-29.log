@@ -1,0 +1,689 @@
+2018-06-29 11:19:27.156 [main] INFO  com.vmax.WeimaiApplication - Starting WeimaiApplication on bogon with PID 13449 (started by wangxiaotao in /Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai)
+2018-06-29 11:19:27.159 [main] DEBUG com.vmax.WeimaiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-06-29 11:19:27.160 [main] INFO  com.vmax.WeimaiApplication - No active profile set, falling back to default profiles: default
+2018-06-29 11:19:27.493 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-06-29 11:19:28.034 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/com/vmax/mapper/TUserMapper.class]
+2018-06-29 11:19:28.035 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'TUserMapper' and 'com.vmax.mapper.TUserMapper' mapperInterface
+2018-06-29 11:19:28.035 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'TUserMapper'.
+2018-06-29 11:19:29.543 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-06-29 11:19:29.633 [main] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2018-06-29 11:19:29.637 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.vmax.entity.TUser matches criteria [is assignable to Object]
+2018-06-29 11:19:29.638 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.vmax.entity' for aliases
+2018-06-29 11:19:29.843 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/mapper/TUserMapper.xml]'
+2018-06-29 11:19:30.327 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-29 11:19:30.328 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-06-29 11:19:30.443 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-29 11:19:31.873 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-29 11:19:31.902 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-29 11:19:31.939 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-06-29 11:19:31.972 [main] INFO  com.vmax.WeimaiApplication - Started WeimaiApplication in 5.363 seconds (JVM running for 6.252)
+2018-06-29 11:19:56.281 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-29 11:19:56.435 [http-nio-8080-exec-2] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+javax.servlet.ServletException: Circular view path [login]: would dispatch back to the current handler URL [/login] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+	at org.springframework.web.servlet.view.InternalResourceView.prepareForRendering(InternalResourceView.java:205)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:145)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:470)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:395)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:316)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-06-29 11:19:56.437 [http-nio-8080-exec-2] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Circular view path [login]: would dispatch back to the current handler URL [/login] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)] with root cause
+javax.servlet.ServletException: Circular view path [login]: would dispatch back to the current handler URL [/login] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+	at org.springframework.web.servlet.view.InternalResourceView.prepareForRendering(InternalResourceView.java:205)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:145)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:112)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:470)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:395)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:316)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:168)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-06-29 11:20:20.761 [http-nio-8080-exec-5] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Circular view path [login]: would dispatch back to the current handler URL [/login] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)] with root cause
+javax.servlet.ServletException: Circular view path [login]: would dispatch back to the current handler URL [/login] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+	at org.springframework.web.servlet.view.InternalResourceView.prepareForRendering(InternalResourceView.java:205)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:145)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-06-29 11:21:22.446 [main] INFO  com.vmax.WeimaiApplication - Starting WeimaiApplication on bogon with PID 13481 (started by wangxiaotao in /Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai)
+2018-06-29 11:21:22.451 [main] DEBUG com.vmax.WeimaiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-06-29 11:21:22.451 [main] INFO  com.vmax.WeimaiApplication - No active profile set, falling back to default profiles: default
+2018-06-29 11:21:22.978 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-06-29 11:21:23.896 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/com/vmax/mapper/TUserMapper.class]
+2018-06-29 11:21:23.897 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'TUserMapper' and 'com.vmax.mapper.TUserMapper' mapperInterface
+2018-06-29 11:21:23.897 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'TUserMapper'.
+2018-06-29 11:21:26.252 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-06-29 11:21:26.346 [main] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2018-06-29 11:21:26.349 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.vmax.entity.TUser matches criteria [is assignable to Object]
+2018-06-29 11:21:26.351 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.vmax.entity' for aliases
+2018-06-29 11:21:26.564 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/mapper/TUserMapper.xml]'
+2018-06-29 11:21:38.340 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-29 11:21:38.341 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-06-29 11:21:38.432 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-29 11:21:39.905 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-29 11:21:39.921 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-29 11:21:39.952 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-06-29 11:21:40.009 [main] INFO  com.vmax.WeimaiApplication - Started WeimaiApplication in 18.137 seconds (JVM running for 19.777)
+2018-06-29 11:21:46.210 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-29 11:21:50.127 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 11:21:50.134 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14c726f0] was not registered for synchronization because synchronization is not active
+2018-06-29 11:21:50.794 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@4fee8853]]] will not be managed by Spring
+2018-06-29 11:21:50.798 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 11:21:50.836 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 11:21:50.867 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 11:21:50.869 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14c726f0]
+2018-06-29 16:08:29.373 [main] INFO  com.vmax.WeimaiApplication - Starting WeimaiApplication on bogon with PID 14721 (started by wangxiaotao in /Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai)
+2018-06-29 16:08:29.378 [main] DEBUG com.vmax.WeimaiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-06-29 16:08:29.378 [main] INFO  com.vmax.WeimaiApplication - No active profile set, falling back to default profiles: default
+2018-06-29 16:08:30.093 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-06-29 16:08:30.816 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/com/vmax/mapper/TUserMapper.class]
+2018-06-29 16:08:30.817 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'TUserMapper' and 'com.vmax.mapper.TUserMapper' mapperInterface
+2018-06-29 16:08:30.817 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'TUserMapper'.
+2018-06-29 16:08:32.818 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-06-29 16:08:32.910 [main] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2018-06-29 16:08:32.914 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.vmax.entity.TUser matches criteria [is assignable to Object]
+2018-06-29 16:08:32.918 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.vmax.entity' for aliases
+2018-06-29 16:08:33.103 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/mapper/TUserMapper.xml]'
+2018-06-29 16:14:30.876 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-29 16:14:30.879 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-06-29 16:14:31.030 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-29 16:14:31.452 [localhost-startStop-1] DEBUG com.vmax.config.xss.XssFilter - xss filter init ====================
+2018-06-29 16:14:33.286 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:14:33.302 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:14:33.347 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-06-29 16:14:33.394 [main] INFO  com.vmax.WeimaiApplication - Started WeimaiApplication in 364.719 seconds (JVM running for 59.781)
+2018-06-29 16:14:59.408 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-29 16:14:59.446 [http-nio-8080-exec-1] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:03.348 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:15:03.362 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67bfe519] was not registered for synchronization because synchronization is not active
+2018-06-29 16:15:04.055 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@31f11685]]] will not be managed by Spring
+2018-06-29 16:15:04.063 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:15:04.087 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:15:04.102 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:15:04.103 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67bfe519]
+2018-06-29 16:15:10.424 [http-nio-8080-exec-3] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:10.466 [http-nio-8080-exec-4] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:10.468 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:15:10.469 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40d50478] was not registered for synchronization because synchronization is not active
+2018-06-29 16:15:10.471 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@31f11685]]] will not be managed by Spring
+2018-06-29 16:15:10.471 [http-nio-8080-exec-4] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:15:10.471 [http-nio-8080-exec-4] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:15:10.472 [http-nio-8080-exec-4] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:15:10.473 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40d50478]
+2018-06-29 16:15:16.914 [http-nio-8080-exec-5] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:16.920 [http-nio-8080-exec-6] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:16.921 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:15:16.921 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2043d848] was not registered for synchronization because synchronization is not active
+2018-06-29 16:15:16.922 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@31f11685]]] will not be managed by Spring
+2018-06-29 16:15:16.922 [http-nio-8080-exec-6] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:15:16.923 [http-nio-8080-exec-6] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:15:16.923 [http-nio-8080-exec-6] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:15:16.924 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2043d848]
+2018-06-29 16:15:23.464 [http-nio-8080-exec-8] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:23.475 [http-nio-8080-exec-9] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:23.477 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:15:23.477 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@543dfdb2] was not registered for synchronization because synchronization is not active
+2018-06-29 16:15:23.478 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@31f11685]]] will not be managed by Spring
+2018-06-29 16:15:23.478 [http-nio-8080-exec-9] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:15:23.479 [http-nio-8080-exec-9] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:15:23.480 [http-nio-8080-exec-9] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:15:23.481 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@543dfdb2]
+2018-06-29 16:15:30.175 [http-nio-8080-exec-10] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:30.191 [http-nio-8080-exec-1] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:15:30.193 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:15:30.193 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b5a4cf6] was not registered for synchronization because synchronization is not active
+2018-06-29 16:15:30.194 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@31f11685]]] will not be managed by Spring
+2018-06-29 16:15:30.194 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:15:30.195 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:15:30.197 [http-nio-8080-exec-1] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:15:30.201 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b5a4cf6]
+2018-06-29 16:16:55.220 [http-nio-8080-exec-4] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:16:55.226 [http-nio-8080-exec-5] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:16:55.228 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:16:55.228 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4903402b] was not registered for synchronization because synchronization is not active
+2018-06-29 16:16:55.229 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@31f11685]]] will not be managed by Spring
+2018-06-29 16:16:55.229 [http-nio-8080-exec-5] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:16:55.229 [http-nio-8080-exec-5] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:16:55.230 [http-nio-8080-exec-5] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:16:55.230 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4903402b]
+2018-06-29 16:23:37.149 [main] INFO  com.vmax.WeimaiApplication - Starting WeimaiApplication on bogon with PID 14899 (started by wangxiaotao in /Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai)
+2018-06-29 16:23:37.157 [main] DEBUG com.vmax.WeimaiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-06-29 16:23:37.158 [main] INFO  com.vmax.WeimaiApplication - No active profile set, falling back to default profiles: default
+2018-06-29 16:23:37.604 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-06-29 16:23:38.497 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/com/vmax/mapper/TUserMapper.class]
+2018-06-29 16:23:38.498 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'TUserMapper' and 'com.vmax.mapper.TUserMapper' mapperInterface
+2018-06-29 16:23:38.498 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'TUserMapper'.
+2018-06-29 16:23:40.873 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-06-29 16:23:40.973 [main] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2018-06-29 16:23:40.976 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.vmax.entity.TUser matches criteria [is assignable to Object]
+2018-06-29 16:23:40.977 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.vmax.entity' for aliases
+2018-06-29 16:23:41.170 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/mapper/TUserMapper.xml]'
+2018-06-29 16:23:45.614 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-29 16:23:45.615 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-06-29 16:23:45.730 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-29 16:23:46.033 [localhost-startStop-1] DEBUG com.vmax.config.xss.XssFilter - xss filter init ====================
+2018-06-29 16:23:47.712 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:23:47.743 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:23:47.786 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-06-29 16:23:47.873 [main] INFO  com.vmax.WeimaiApplication - Started WeimaiApplication in 11.306 seconds (JVM running for 12.716)
+2018-06-29 16:24:00.651 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-29 16:24:00.716 [http-nio-8080-exec-1] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:24:00.785 [http-nio-8080-exec-2] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:24:01.041 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:24:01.046 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@722a5602] was not registered for synchronization because synchronization is not active
+2018-06-29 16:24:01.414 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@162f3a5f]]] will not be managed by Spring
+2018-06-29 16:24:01.418 [http-nio-8080-exec-2] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:24:01.446 [http-nio-8080-exec-2] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:24:01.460 [http-nio-8080-exec-2] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:24:01.461 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@722a5602]
+2018-06-29 16:24:04.515 [http-nio-8080-exec-3] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:24:04.516 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:24:04.517 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@167ad407] was not registered for synchronization because synchronization is not active
+2018-06-29 16:24:04.519 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@162f3a5f]]] will not be managed by Spring
+2018-06-29 16:24:04.519 [http-nio-8080-exec-3] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:24:04.520 [http-nio-8080-exec-3] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:24:04.521 [http-nio-8080-exec-3] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:24:04.521 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@167ad407]
+2018-06-29 16:25:08.735 [http-nio-8080-exec-6] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:25:08.743 [http-nio-8080-exec-7] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:25:08.746 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2018-06-29 16:25:08.746 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@698611d3] was not registered for synchronization because synchronization is not active
+2018-06-29 16:25:08.747 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@162f3a5f]]] will not be managed by Spring
+2018-06-29 16:25:08.747 [http-nio-8080-exec-7] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==>  Preparing: select id, bz, `password`, true_name, user_name, remarks from t_user where id = ? 
+2018-06-29 16:25:08.748 [http-nio-8080-exec-7] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2018-06-29 16:25:08.749 [http-nio-8080-exec-7] DEBUG com.vmax.mapper.TUserMapper.selectByPrimaryKey - <==      Total: 0
+2018-06-29 16:25:08.749 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@698611d3]
+2018-06-29 16:26:10.367 [main] INFO  com.vmax.WeimaiApplication - Starting WeimaiApplication on bogon with PID 14927 (started by wangxiaotao in /Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai)
+2018-06-29 16:26:10.371 [main] DEBUG com.vmax.WeimaiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-06-29 16:26:10.372 [main] INFO  com.vmax.WeimaiApplication - No active profile set, falling back to default profiles: default
+2018-06-29 16:26:10.691 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-06-29 16:26:11.728 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/com/vmax/mapper/TUserMapper.class]
+2018-06-29 16:26:11.729 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'TUserMapper' and 'com.vmax.mapper.TUserMapper' mapperInterface
+2018-06-29 16:26:11.731 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'TUserMapper'.
+2018-06-29 16:26:14.050 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-06-29 16:26:14.206 [main] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2018-06-29 16:26:14.210 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.vmax.entity.TUser matches criteria [is assignable to Object]
+2018-06-29 16:26:14.212 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.vmax.entity' for aliases
+2018-06-29 16:26:14.459 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/mapper/TUserMapper.xml]'
+2018-06-29 16:26:15.084 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-29 16:26:15.085 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-06-29 16:26:15.195 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-29 16:26:15.478 [localhost-startStop-1] DEBUG com.vmax.config.xss.XssFilter - xss filter init ====================
+2018-06-29 16:26:17.018 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:26:17.040 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:26:17.079 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-06-29 16:26:17.112 [main] INFO  com.vmax.WeimaiApplication - Started WeimaiApplication in 7.242 seconds (JVM running for 8.584)
+2018-06-29 16:26:21.311 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-29 16:26:21.381 [http-nio-8080-exec-1] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:26:30.823 [http-nio-8080-exec-2] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:26:30.873 [http-nio-8080-exec-3] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:26:56.520 [http-nio-8080-exec-5] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:27:19.290 [main] INFO  com.vmax.WeimaiApplication - Starting WeimaiApplication on bogon with PID 14937 (started by wangxiaotao in /Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai)
+2018-06-29 16:27:19.298 [main] DEBUG com.vmax.WeimaiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-06-29 16:27:19.299 [main] INFO  com.vmax.WeimaiApplication - No active profile set, falling back to default profiles: default
+2018-06-29 16:27:19.957 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-06-29 16:27:20.628 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/com/vmax/mapper/TUserMapper.class]
+2018-06-29 16:27:20.629 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'TUserMapper' and 'com.vmax.mapper.TUserMapper' mapperInterface
+2018-06-29 16:27:20.629 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'TUserMapper'.
+2018-06-29 16:27:22.287 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-06-29 16:27:22.369 [main] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2018-06-29 16:27:22.372 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.vmax.entity.TUser matches criteria [is assignable to Object]
+2018-06-29 16:27:22.374 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.vmax.entity' for aliases
+2018-06-29 16:27:22.561 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/mapper/TUserMapper.xml]'
+2018-06-29 16:27:41.225 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-29 16:27:41.226 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-06-29 16:27:41.338 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-29 16:27:41.607 [localhost-startStop-1] DEBUG com.vmax.config.xss.XssFilter - xss filter init ====================
+2018-06-29 16:28:02.934 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:28:02.952 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:28:02.986 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-06-29 16:28:03.026 [main] INFO  com.vmax.WeimaiApplication - Started WeimaiApplication in 44.247 seconds (JVM running for 46.13)
+2018-06-29 16:28:28.439 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-29 16:28:28.514 [http-nio-8080-exec-1] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:28:32.168 [http-nio-8080-exec-2] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:28:35.474 [http-nio-8080-exec-3] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:28:40.163 [http-nio-8080-exec-5] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:28:40.211 [http-nio-8080-exec-6] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:33:26.664 [restartedMain] INFO  com.vmax.WeimaiApplication - Starting WeimaiApplication on bogon with PID 15059 (started by wangxiaotao in /Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai)
+2018-06-29 16:33:26.669 [restartedMain] DEBUG com.vmax.WeimaiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-06-29 16:33:26.670 [restartedMain] INFO  com.vmax.WeimaiApplication - No active profile set, falling back to default profiles: default
+2018-06-29 16:33:27.111 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-06-29 16:33:28.119 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/com/vmax/mapper/TUserMapper.class]
+2018-06-29 16:33:28.119 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'TUserMapper' and 'com.vmax.mapper.TUserMapper' mapperInterface
+2018-06-29 16:33:28.119 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'TUserMapper'.
+2018-06-29 16:33:31.044 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2018-06-29 16:33:31.135 [restartedMain] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2018-06-29 16:33:31.139 [restartedMain] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.vmax.entity.TUser matches criteria [is assignable to Object]
+2018-06-29 16:33:31.140 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Scanned package: 'com.vmax.entity' for aliases
+2018-06-29 16:33:31.365 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/wangxiaotao/Downloads/涛哥项目/git_Repository/weimai/target/classes/mapper/TUserMapper.xml]'
+2018-06-29 16:33:36.249 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-06-29 16:33:36.250 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-06-29 16:33:36.380 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-06-29 16:33:36.704 [localhost-startStop-1] DEBUG com.vmax.config.xss.XssFilter - xss filter init ====================
+2018-06-29 16:33:38.208 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:33:38.225 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-29 16:33:38.251 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-06-29 16:33:38.279 [restartedMain] INFO  com.vmax.WeimaiApplication - Started WeimaiApplication in 12.081 seconds (JVM running for 13.566)
+2018-06-29 16:33:48.747 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-29 16:33:48.797 [http-nio-8080-exec-1] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:34:47.389 [http-nio-8080-exec-3] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:34:47.519 [http-nio-8080-exec-3] ERROR freemarker.runtime - Error executing FreeMarker template
+freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> tmenuOneClassList  [in template "welcome.ftl" at line 32, column 64]
+
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #list tmenuOneClassList as key  [in template "welcome.ftl" at line 32, column 57]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.Expression.assertNonNull(Expression.java:233)
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:103)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:93)
+	at freemarker.core.Environment.visit(Environment.java:325)
+	at freemarker.core.Environment.visit(Environment.java:331)
+	at freemarker.core.Environment.process(Environment.java:304)
+	at freemarker.template.Template.process(Template.java:382)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:368)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:285)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:235)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.vmax.config.xss.XssFilter.doFilter(XssFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-06-29 16:34:47.528 [http-nio-8080-exec-3] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> tmenuOneClassList  [in template "welcome.ftl" at line 32, column 64]
+
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #list tmenuOneClassList as key  [in template "welcome.ftl" at line 32, column 57]
+----] with root cause
+freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> tmenuOneClassList  [in template "welcome.ftl" at line 32, column 64]
+
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: #list tmenuOneClassList as key  [in template "welcome.ftl" at line 32, column 57]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.Expression.assertNonNull(Expression.java:233)
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:103)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:93)
+	at freemarker.core.Environment.visit(Environment.java:325)
+	at freemarker.core.Environment.visit(Environment.java:331)
+	at freemarker.core.Environment.process(Environment.java:304)
+	at freemarker.template.Template.process(Template.java:382)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:368)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:285)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:235)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.vmax.config.xss.XssFilter.doFilter(XssFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-06-29 16:34:47.534 [http-nio-8080-exec-3] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:34:47.543 [http-nio-8080-exec-4] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:34:47.543 [http-nio-8080-exec-5] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:34:47.804 [http-nio-8080-exec-6] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:35:39.707 [http-nio-8080-exec-8] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
+2018-06-29 16:35:39.717 [http-nio-8080-exec-8] DEBUG com.vmax.config.xss.XssFilter - xss filter is open
