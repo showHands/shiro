@@ -27,6 +27,7 @@ public class WeimaiRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+
         return null;
     }
 

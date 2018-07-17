@@ -4,3 +4,42 @@ Realm:域，Shiro从Realm获取安全数据（如：用户、角色、权限）�
 Realm配置方式：
     单Realm配置 securityManager=$MyRealm1
     多Realm配置 securityManager=$MyRealm1,$MyRealm2 , securityManager会按照realm声明的舒徐进行使用
+
+基于角色的访问控制（隐式角色）
+    hasRole()
+    hasAllRoles()
+    hasRoles()
+
+    //判断为假的情况下会抛异常unauthorizedException
+    checkRole()
+    checkRoles
+
+基于资源的访问控制（显示角色）
+    isPermitted();
+    isPermittedAll();
+    //判断为假的情况下会抛出异常unauthorizedException
+    checkPermission();
+    checkPermissions();
+
+字符串通配符权限
+system:user:update  单个资源单个权限
+system:user:update,delete  单个资源多个权限
+system:user:* 等价于 system:user , 推荐使用前一种用法
+*:vier 所有资源全部权限
+WildcardPermission使用
+subject().checkPermission("menuLview:1")  等价于 subject().checkPermission(new WildcardPermission("menu:view:1"))
+
+性能问题：
+
+BitPermission:用于实现位移方式的权限，规则是：+user+10
++资源字符串+权限位+实例ID;
+权限： 0表示所有权限；
+       1新增
+       2修改
+       4删除
+       8查看
+如：+user+10表示对资源user拥有修改/查看权限。
+
+
+
+

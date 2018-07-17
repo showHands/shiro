@@ -134,6 +134,16 @@ public class LoginLogoutTest {
      */
     public void testHasRole(){
         login("classpath:shiro-role.ini", "zhang", "123");
+    }
+
+
+
+    /**
+     * 角色权限测试
+     */
+    public void testIsPermitted(){
+        login("classpath:shiro-permission.ini", "zhang", "123" );
+        System.out.println();
 
     }
 }

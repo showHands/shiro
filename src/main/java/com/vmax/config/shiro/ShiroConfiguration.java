@@ -19,7 +19,7 @@ import java.util.Map;
 public class ShiroConfiguration {
 
     /**
-     * 将自己定义的验证方式加入到容器
+     * 将自己定义的验证身份和权限的方式加入到容器
      * @return
      */
     @Bean
@@ -96,7 +96,4 @@ public class ShiroConfiguration {
         cookieRememberMeManager.setCookie(rememberMeCookie());
         return cookieRememberMeManager;
     }
-
-
-
 }
