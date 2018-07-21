@@ -1,6 +1,8 @@
 package com.vmax.mapper;
 
 import com.vmax.entity.TUser;
+import com.vmax.entity.Tbuser;
+
 import java.util.List;
 
 public interface TUserMapper {
@@ -44,5 +46,5 @@ public interface TUserMapper {
      */
     int updateByPrimaryKey(TUser record);
 
-    TUser selectByUserName(String userName) ;
+
 }
