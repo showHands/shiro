@@ -1,4 +1,4 @@
-#用户表：
+#用户表
 
 CREATE TABLE `tbUser` (
   `lId` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户主键Id',
