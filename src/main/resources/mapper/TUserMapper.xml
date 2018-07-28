@@ -64,10 +64,9 @@
     select id, bz, `password`, true_name, user_name, remarks
     from t_user
   </select>
-  <select id="selectByUserName" resultMap="BaseResultMap">
+  <select id="findUserByName" resultMap="BaseResultMap">
     select id, bz, `password`, true_name, user_name, remarks
     from t_user
     where user_name = #{userName}
-
   </select>
 </mapper>
