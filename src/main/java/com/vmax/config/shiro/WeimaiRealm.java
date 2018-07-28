@@ -1,7 +1,7 @@
 package com.vmax.config.shiro;
 
-import com.vmax.entity.TUser;
-import com.vmax.mapper.TUserMapper;
+import com.vmax.entity.Tbuser;
+import com.vmax.service.impl.UserServiceImpl;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class WeimaiRealm extends AuthorizingRealm {
 
     @Autowired
-    private TUserMapper tUserMapper ;
+    private UserServiceImpl userService;
 
     /**
      * 权限认证
@@ -45,11 +45,11 @@ public class WeimaiRealm extends AuthorizingRealm {
         }
 
         //根据用户名查询用户信息
-        TUser tUser = tUserMapper.selectByUserName(userName) ;
+        Tbuser tUser = userService.findUserByName(userName);
         if(null == tUser){
             return null ;
         }
-        AuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(tUser.getUserName(), tUser.getPassword(), "xxx") ;
+        AuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(tUser.getStrusername(), tUser.getStrpassword(), "xxx") ;
 
         return authenticationInfo;
     }

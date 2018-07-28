@@ -1,14 +1,11 @@
 package com.vmax.service.impl;
 
-import com.vmax.entity.TUser;
 import com.vmax.entity.Tbuser;
-import com.vmax.mapper.TUserMapper;
 import com.vmax.mapper.TbuserMapper;
 import com.vmax.service.IUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
