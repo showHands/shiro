@@ -42,7 +42,7 @@
             ${message}
         </div>
         </#if>
-        <form id="form-login" action="${ctx!}/admin/loginPost" method="post">
+        <form id="form-login" action="${ctx!}/admin/loginpost" method="post">
             <div class="form-group has-feedback">
                 <input type="username" name="username" class="form-control" placeholder="username">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

@@ -23,8 +23,8 @@ public class ShiroConfiguration {
      * @return
      */
     @Bean
-    public WeimaiRealm myShiroRealm(){
-        return new WeimaiRealm() ;
+    public UserRealm myShiroRealm(){
+        return new UserRealm() ;
     }
 
     /**
