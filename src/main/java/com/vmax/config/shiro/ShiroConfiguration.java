@@ -1,31 +1,81 @@
 package com.vmax.config.shiro;
 
+import org.apache.shiro.cache.CacheManager;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.session.SessionException;
+import org.apache.shiro.session.SessionListener;
+import org.apache.shiro.session.mgt.SessionContext;
+import org.apache.shiro.session.mgt.SessionKey;
+import org.apache.shiro.session.mgt.SessionManager;
+import org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO;
+import org.apache.shiro.session.mgt.eis.JavaUuidSessionIdGenerator;
+import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.servlet.SimpleCookie;
+import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
+import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.apache.shiro.mgt.SecurityManager ;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by wangxiaotao on 2018/6/28.
+ * Shiro 权限管理框架配置
  */
 @Configuration
 public class ShiroConfiguration {
 
-    /**
-     * 将自己定义的验证身份和权限的方式加入到容器
-     * @return
-     */
+
+    // 授权和身份验证
     @Bean
     public UserRealm myShiroRealm(){
         return new UserRealm() ;
     }
+
+    // 会话监听器
+    @Bean
+    public MySessionListener sessionListener(){
+        return new MySessionListener() ;
+    }
+
+    // 会话持久化/存储
+    @Bean
+    public SessionDAO sessionDAO(){
+        SessionDAO sessionDAO = new EnterpriseCacheSessionDAO();
+        ((EnterpriseCacheSessionDAO) sessionDAO).setSessionIdGenerator(new JavaUuidSessionIdGenerator());
+        ((EnterpriseCacheSessionDAO) sessionDAO).setActiveSessionsCacheName("shiro-activeSessionCache");
+        return sessionDAO;
+    }
+
+
+    // 会话管理器
+    @Bean
+    public SessionManager sessionManager(){
+        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
+        sessionManager.setSessionIdCookie(new SimpleCookie());
+        List<SessionListener> sessionListenerList = new ArrayList<>();
+        sessionListenerList.add(new MySessionListener());
+        sessionManager.setSessionListeners(sessionListenerList);
+        sessionManager.setSessionDAO(sessionDAO());
+       return sessionManager;
+    }
+
+
+
+
+    // 缓存管理器
+/*    @Bean
+    public CacheManager cacheManager(){
+        return new EhCacheCacheManager();
+    }*/
 
     /**
      * 安全管理器加入到容器中，以自定义的权限认证方式初始化
@@ -35,8 +85,11 @@ public class ShiroConfiguration {
     public SecurityManager securityManager(){
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager() ;
         securityManager.setRealm(myShiroRealm());
+        securityManager.setSessionManager(sessionManager());
         return securityManager ;
     }
+
+
 
     @Bean
     public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager){

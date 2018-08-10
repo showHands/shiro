@@ -41,5 +41,30 @@ BitPermission:用于实现位移方式的权限，规则是：+user+10
 如：+user+10表示对资源user拥有修改/查看权限。
 
 
+会话管理：
+ Subject subject = SecurityUtils.getSubject();
+ Session session = subject.getSession();
 
+会话属性：
+    session.getId();                // 会话唯一标识
+    session.getHost();              // 当前会话ip地址
+    session.getTimeout();           // 会话过期时间
+    session.touch();                // 更新最后访问时间
+    session.stop();                 // 销毁session,Subject.logout() 和 Session.invalidate()会自动调用stop()方法销毁会话
+    session.setAttribute("a", "a");
+    session.getAttribute("a");      // 自定义属性
+    session.getStartTimestamp();   //session 创建时间
+    session.getLastAccexxTime();   //更新最后访问时间，即最后一次调用ShiroFilter的时间
 
+会话管理器：
+sessionIdCookie 是 sessionManager 创建会话 Cookie 的模板：
+sessionIdCookie.name：设置 Cookie 名字，默认为 JSESSIONID；
+sessionIdCookie.domain：设置 Cookie 的域名，默认空，即当前访问的域名；
+sessionIdCookie.path：设置 Cookie 的路径，默认空，即存储在域名根下；
+sessionIdCookie.maxAge：设置 Cookie 的过期时间，秒为单位，默认-1 表示关闭浏览器时 过期 Cookie；
+sessionIdCookie.httpOnly：如果设置为 true，则客户端不会暴露给客户端脚本代码，使用 HttpOnly cookie有助于减少某些类型的跨站点脚本攻击； 此特性需要实现了Servlet 2.5 MR6 及以上版本的规范的 Servlet 容器支持；
+sessionManager.sessionIdCookieEnabled：是否启用/禁用 Session Id Cookie，默认是启用的； 如果禁用后将不会设置 Session Id Cookie，即默认使用了 Servlet 容器的 JSESSIONID，且通 过 URL 重写（URL 中的“;JSESSIONID=id”部分）保存 Session Id。
+
+会话监听器：
+会话监听器用于监听会话创建、过期及停止事件：
+继承SessionListener
