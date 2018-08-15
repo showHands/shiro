@@ -30,9 +30,13 @@ public class UserController extends BaseController{
 
     @RequestMapping(value = "welcome" , method = RequestMethod.GET)
     public String welcome(Model model){
-        model.addAttribute("strUserName", "王晓涛") ;
-        model.addAttribute("strPassword", "13269639602") ;
-        return "welcome" ;
+        /*model.addAttribute("strUserName", "王晓涛") ;
+        model.addAttribute("strPassword", "13269639602") ;*/
+        Subject subject = SecurityUtils.getSubject();
+        if(subject.isAuthenticated()){
+            return "admin/index";
+        }
+        return "gologin" ;
     }
 
     /**
@@ -78,5 +82,10 @@ public class UserController extends BaseController{
         // 登陆成功
         logger.info("用户登陆成功：[username:"+strUserName+"] ");
         return "index" ;
+    }
+
+    @RequestMapping(value = "logout", method = RequestMethod.GET)
+    public String logout(){
+        return "admin/logout";
     }
 }

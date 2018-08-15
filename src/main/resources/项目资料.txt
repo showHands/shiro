@@ -1,5 +1,7 @@
 shiro学习代码git地址：https://github.com/NotTheSameWorld/bluesky.git
 
+文本编辑器插件： ckeditor4
+
 Realm:域，Shiro从Realm获取安全数据（如：用户、角色、权限），就是说SecurityManager要验证用户身份，那么它需要从Realm获取相应的用户进行比较以确定用户身份是否合法。
 Realm配置方式：
     单Realm配置 securityManager=$MyRealm1
